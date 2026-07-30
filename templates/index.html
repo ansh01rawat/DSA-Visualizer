@@ -2,22 +2,60 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>DSA Visualizer</title>
 
     <link rel="stylesheet"
           href="{{ url_for('static', filename='css/style.css') }}">
+
 </head>
 
 <body>
 
-    <h1>🚀 DSA Visualizer</h1>
+<nav>
 
-    <p>Welcome Captain!</p>
+    <h2>DSA Visualizer</h2>
 
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</nav>
+
+<section class="hero">
+
+    <h1>Visualize Data Structures & Algorithms</h1>
+
+    <p>
+        Learn DSA through beautiful real-time animations.
+    </p>
+
+    <button>Get Started</button>
+
+</section>
+
+<section class="cards">
+
+    <a href = "/arrays" class="card">
+        Arrays
+    </a>
+
+    <a href= "/sliding-window" class="card">
+        Sliding Window
+    </a>
+
+    <a href = "/binary-search"class="card">
+        Binary Search
+    </a>
+
+    <a href = "/trees" class="card">
+        Trees
+    </a>
+
+</section>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
 </body>
 

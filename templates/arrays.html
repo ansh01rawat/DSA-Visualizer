@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Arrays Visualizer</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<nav>
+
+<h2>DSA Visualizer</h2>
+
+</nav>
+
+<section class="hero">
+
+<h1>Arrays Visualizer</h1>
+
+<p>Visual representation of an array.</p>
+
+</section>
+
+<section class="array-container">
+
+{% for number in array %}
+
+
+<div class="array-box">
+
+    {{ number }}
+
+</div>
+
+{% endfor %}
+
+</section>
+<button id="start-btn">
+
+Start Linear Search
+
+</button>
+
+<a href="/">⬅ Back Home</a>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>

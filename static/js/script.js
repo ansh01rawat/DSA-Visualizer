@@ -2,27 +2,35 @@ const button = document.getElementById("start-btn");
 
 const boxes = document.querySelectorAll(".array-box");
 
+document.getElementById("result").textContent = "";
 button.addEventListener("click", function(){
 
     boxes.forEach(box => {
         box.style.background = "#2563eb";
     });
+    let found = false
+    
+    
 
-    boxes.forEach((box,index)=>{
-
-        setTimeout(()=>{
-
-            if(index>0){
-                boxes[index-1].style.background="#2563eb";
+            const target = Number(document.getElementById("target-input").value);
+            for(let i = 0; i < boxes.length; i++){
+                setTimeout(()=>{
+                if(found)return;
+                
+                if(Number(boxes[i].textContent) === target){
+                boxes[i].style.background = "green";
+               document.getElementById("result").textContent =`Target Found at Index ${i}`;
+               found = true;
+               
+               }else{
+                boxes[i].style.background = "orange"
+               }}, i*600);
             }
-            if(index == boxes.length-1){
-                box.style.background="green"
-            }else{
-                box.style.background="orange";
-            }
+    
+            
 
-        },index*600);
+        })
 
-    });
 
-});
+
+

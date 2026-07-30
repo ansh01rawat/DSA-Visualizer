@@ -182,3 +182,49 @@ button:hover{
     background:#3b82f6;
 
 }
+.controls{
+    margin-top:40px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+}
+
+.controls input{
+
+    padding:12px;
+
+    width:180px;
+
+    border-radius:8px;
+
+    border:none;
+
+    font-size:18px;
+}
+
+.controls button{
+
+    padding:12px 20px;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-size:18px;
+}
+
+#result{
+
+    text-align:center;
+
+    margin-top:25px;
+
+    font-size:22px;
+
+    font-weight:bold;
+}

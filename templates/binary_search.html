@@ -1,19 +1,68 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 
 <head>
 
-<title>Binary Search</title>
+    <meta charset="UTF-8">
+
+    <title>Binary Search Visualizer</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
 
 </head>
 
 <body>
 
-<h1>Binary search Visualizer</h1>
+<nav>
+
+<h2>DSA Visualizer</h2>
+
+</nav>
+
+<section class="hero">
+
+<h1>Binary Search Visualizer</h1>
+
+<p>Visualize how Binary Search eliminates half of the search space at every step.</p>
+
+</section>
+
+<section class="array-container">
+
+{% for number in array %}
+
+
+<div class="array-box">
+
+    {{ number }}
+
+</div>
+
+{% endfor %}
+
+</section>
+
+
+<section class="controls">
+
+    <input
+        type="number"
+        id="target-input"
+        placeholder="Enter Target">
+
+    <button id="start-btn">
+        Start Search
+    </button>
+
+</section>
+
+<p id="result"></p>
 
 <a href="/">⬅ Back Home</a>
 
+<script src="{{ url_for('static', filename='js/binary_search.js') }}"></script>
 </body>
 
 </html>

@@ -26,7 +26,15 @@ def sliding_window():
 
 @app.route("/binary-search")
 def binary_search():
-    return render_template("binary_search.html")
+
+    array = random.sample(range(1,100),8)
+
+    array.sort()
+
+    return render_template(
+        "binary_search.html",
+        array=array
+    )
 
 
 @app.route("/trees")

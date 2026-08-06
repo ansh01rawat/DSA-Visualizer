@@ -13,12 +13,22 @@ button.addEventListener("click", function(){
     binarySearchStep(low, high, target);
 
 });
-
+function resetBoxes() {
+            for(let i = 0; i < boxes.length; i++){
+                boxes[i].style.background = "#4405e4";
+            }
+}
+function greyOut(start, end){
+            for(let i = start; i <= end; i++){
+                boxes[i].style.background = "#9ca3af";
+            }
+}
 function binarySearchStep(low, high, target){
         if(low > high){
         result.textContent = "target not found"
         button.disabled = false;
         return;}
+        resetBoxes();
         let mid = Math.floor((low + high) / 2);
         let midValue = Number(boxes[mid].textContent);
         boxes[low].style.background = "#000000";
@@ -34,9 +44,11 @@ function binarySearchStep(low, high, target){
             
         }
         else if(target > midValue){
+            greyOut(low,mid);
             low = mid + 1;
         }
         else{
+            greyOut(mid+1,high);
             high = mid - 1;
         }
         
